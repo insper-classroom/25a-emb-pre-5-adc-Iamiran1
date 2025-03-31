@@ -25,7 +25,7 @@ void data_task(void *p) {
 
 void process_task(void *p) {
     int data = 0;
-    int list_data[100];
+    int list_data[1000];
     int contador = 0;
     while (true) {
         if (xQueueReceive(xQueueData, &data, 100)) {
