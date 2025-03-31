@@ -32,7 +32,7 @@ void process_task(void *p) {
             list_data[contador] = data;
             contador ++;
             if(contador >3){
-                int y = (int)(list_data[contador]+list_data[contador - 1]+list_data[contador - 2]+list_data[contador - 3] +list_data[contador - 4]) /5 ;
+                int y = (list_data[contador]+list_data[contador - 1]+list_data[contador - 2]+list_data[contador - 3] +list_data[contador - 4]) /5 ;
                 printf("%d \n",y);
             }
             // implementar filtro aqui!
