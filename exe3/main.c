@@ -37,16 +37,16 @@ void process_task(void *p) {
             }
             else{
                 if(contador == 3){                
-                    y = (list_data[contador]+list_data[contador - 1]+list_data[contador - 2]+list_data[contador - 3])/4 ;
+                    y = (list_data[contador]+list_data[contador - 1]+list_data[contador - 2]+list_data[contador - 3])/5 ;
                 }
                 else if(contador == 2 ){
-                    y = (list_data[contador]+list_data[contador - 1]+list_data[contador - 2])/3 ;
+                    y = (list_data[contador]+list_data[contador - 1]+list_data[contador - 2])/5 ;
                 }
                 else if(contador == 1 ){
-                y = (list_data[contador]+list_data[contador - 1])/2 ;
+                y = (list_data[contador]+list_data[contador - 1])/5 ;
                 }
                 else{
-                y = list_data[contador];
+                y = list_data[contador]/5;
                 }
 
                 printf("%d\n",y);
