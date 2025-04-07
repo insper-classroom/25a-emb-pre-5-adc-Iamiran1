@@ -31,9 +31,22 @@ void process_task(void *p) {
         if (xQueueReceive(xQueueData, &data, 100)) {
             list_data[contador] = data;
             contador ++;
+            int y;
             if(contador >3){
-                int y = (list_data[contador]+list_data[contador - 1]+list_data[contador - 2]+list_data[contador - 3] +list_data[contador - 4]) /5 ;
-                printf("%d \n",y);
+                y = (list_data[contador]+list_data[contador - 1]+list_data[contador - 2]+list_data[contador - 3] +list_data[contador - 4]) /5 ;
+                printf("%d\n",y);
+            }
+            else{
+                if(contador == 3)
+                y = (list_data[contador]+list_data[contador - 1]+list_data[contador - 2]+list_data[contador - 3])/4 ;
+                if(contador == 2 )
+                y = (list_data[contador]+list_data[contador - 1]+list_data[contador - 2])/3 ;
+                if(contador == 1 )
+                y = (list_data[contador]+list_data[contador - 1])/2 ;
+                if(contador == 0 )
+                y = list_data[contador];
+
+                printf("%d\n",y);
             }
             // implementar filtro aqui!
             // deixar esse delay!
