@@ -30,7 +30,6 @@ void process_task(void *p) {
     while (true) {
         if (xQueueReceive(xQueueData, &data, 100)) {
             list_data[contador] = data;
-            contador ++;
             int y;
             if(contador >3){
                 y = (list_data[contador]+list_data[contador - 1]+list_data[contador - 2]+list_data[contador - 3] +list_data[contador - 4]) /5 ;
@@ -51,7 +50,9 @@ void process_task(void *p) {
                 }
 
                 printf("%d\n",y);
+                
             }
+            contador ++;
             // implementar filtro aqui!
             // deixar esse delay!
             vTaskDelay(pdMS_TO_TICKS(50));
